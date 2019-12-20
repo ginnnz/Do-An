@@ -1,0 +1,77 @@
+<?php
+session_start();
+$username="";
+$password="";
+$email="";
+$hoten="";
+$diachi="";
+$sdt="";
+$errors=array();
+try{
+//$pdh = new PDO("mysql:host=localhost; dbname=gym"  , "ginnnz"  , "7121998Ab"  );
+$pdh = new PDO("mysql:host=localhost; dbname=gym"  , "root"  , ""  );
+$pdh->query("  set names 'utf8'"  );
+}
+catch(Exception $e){
+    echo $e->getMessage(); exit;
+
+}
+
+// [1]. Chức Năng Đăng Ký:
+
+$stm = $pdh->query("  SELECT * FROM taikhoan"  );
+
+//kiem tra tai khoan co ton tai hay chua
+if (isset($_POST['reg_user'])) {
+//nhan gia tri tu form
+  $username =  $_POST['username'];
+  $email = $_POST['email'];
+  $password_1 = $_POST['password_1'];
+  $password_2 = $_POST['password_2'];
+  $hoten = $_POST['hoten'];
+  $diachi = $_POST['diachi'];
+  $sdt = $_POST['sdt'];
+  header('location: afterregister.php');
+  /*$user_check_query =$pdh->query("SELECT username, email FROM user WHERE username='$username' OR email='$email' LIMIT 1");
+  $result = $user_check_query->fetchAll(PDO::FETCH_ASSOC);*/
+//nếu tài khoản tồn tại
+//kiem tra ton tai, neu ko, xuat day thong bao
+
+  if (empty($username)) { array_push($errors, "Username is required"); }
+  if (empty($email)) { array_push($errors, "Email is required"); }
+  if (empty($password_1)||empty($password_2)) { array_push($errors, "Password is required"); }
+  if ($password_1 != $password_2) { array_push($errors, "Two passwords do not match"); }
+  if (empty($hoten)) { array_push($errors, "Name is required"); }
+  if (empty($diachi)) { array_push($errors, "Address is required"); }
+  if (empty($sdt)) { array_push($errors, "Phone number is required"); }
+
+  $dk= $pdh->query("INSERT INTO taikhoan (tendangnhap, email, matkhau,hoten,diachi,sdt) VALUES('$username', '$email', '$password_1','$hoten','$diachi','$sdt')");  
+  
+} 
+
+// [2]. Chức Năng Đăng Nhập:
+
+if (isset($_POST['log_user'])) {
+  $username = $_POST['username'];
+  $password = $_POST['password'];
+if (empty($username)) {
+    array_push($errors, "Username is required");
+  }
+  if (empty($password)) {
+    array_push($errors, "Password is required");
+  }
+
+  if (count($errors) == 0) {
+    $results = $pdh->query("SELECT * FROM taikhoan WHERE tendangnhap='$username' AND matkhau='$password' ");
+    if ($results->rowCount() == 1) {
+      $_SESSION['username']=$username;
+      $_SESSION['success'] = "You are now logged in";
+      header('location: success.php');
+    }else {
+      array_push($errors, "Wrong username/password combination");
+    }
+  }
+}
+
+
+?><?php?>

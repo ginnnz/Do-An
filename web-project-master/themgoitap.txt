@@ -1,0 +1,285 @@
+<?php include('connect.php') ?>
+<!DOCTYPE html>
+<head>
+    <title>ĐĂNG KÝ GÓI TẬP</title>
+    <meta charset="utf-8">
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
+
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/animations.css">
+    <link rel="stylesheet" href="css/fonts.css">
+    <script src="js/vendor/modernizr-2.6.2.min.js"></script>
+
+</head>
+<body>
+
+
+<div id="box_wrapper">
+
+    <section id="topline" class="darkgrey_section">
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-6">
+                    <span>
+                        <i class="fa fa-envelope-o"></i> <a href="mailto:brandzess21@gmail.com">brandzess21@gmail.com</a>
+                    </span>
+                    <span>
+                         <i class="fa fa-phone"></i> +33 566 8037
+                    </span>
+                </div>
+                <div class="col-sm-6 text-right">
+                    <span></span>
+                        <?php echo ' Xin chào: '?> <i class="rt-icon-user2"></i>
+                                                   <a href="customerinfo.php"> <?php echo $_SESSION['username'];?> </a>
+                    <span></span>
+                    <span><a href="logout.php"> Đăng Xuất </a></span>
+                    </span>
+                </div>
+                
+            </div>
+        </div>
+    </section>
+
+
+    <section id="topinfo" class="action_section table_section darkgrey_section">
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-4">
+                    <a href="afterlogin.php" class="navbar-brand" > STEEL BULL CENTER <span></span></a>
+                </div>
+
+                <div class="col-sm-8 text-right">
+                    Follow Us:
+                    <a class="socialico-facebook" href="#" title="Facebook" data-toggle="tooltip">#</a>
+                    <a class="socialico-twitter" href="#" title="Twitter" data-toggle="tooltip">#</a>
+                    <a class="socialico-google" href="#" title="Google" data-toggle="tooltip">#</a>
+                    
+
+                   
+                        <div class="widget widget_search">
+                            <form role="search" method="post" id="searchform" class="searchform form-inline" action="/">
+                                <div class="form-group">
+                                    <label class="screen-reader-text" for="search">Search for:</label>
+                                    <input type="text" value="" name="search" id="search" style="color: #00FF30" class="form-control" placeholder="Search...">
+                                </div>
+                                <button type="submit" id="searchsubmit" class="theme_button" >Search</button>
+                            </form>
+                        </div>
+                </div>               
+           </div>
+        </div>
+    </section>
+
+    <header id="header">
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-12">
+                    <span id="toggle_mobile_menu"></span>
+                    <nav id="mainmenu_wrapper">
+                        <ul id="mainmenu" class="nav nav-justified sf-menu">
+                            <li class="active">
+                                <a href="afterlogin.php"><i class="rt-icon-home"></i>Trang chủ</a>
+                            </li>
+                            <li>
+                                <a href="#"><i class="rt-icon-book" ></i>DỊCH VỤ</a>
+                                <ul>
+                                     <li>
+                                        <a href="goitap.php" style="font-weight: bold;">GÓI TẬP</a>
+                                    </li>
+                                    <li>
+                                        <a href="hopdong.php" style="font-weight: bold;">HỢP ĐỒNG</a>
+                                    </li>
+                                    <li>
+                                        <a href="#" style="font-weight: bold">PERSONAL TRAINER</a>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li>
+                                <a href="#"><i class="rt-icon-images2"></i>Tìm nâng cao</a>
+                            </li>
+                            <li>
+                                <a href="contact.php"><i class="rt-icon-contacts"></i> Liên hệ </a>
+                            </li>
+                        </ul>  
+                    </nav>
+                
+                </div>
+            </div>
+        </div>
+    </header>
+
+
+    <section id="breadcrumbs" class="darkgrey_section with_bottom_border">
+        <div class="container">
+
+            <div class="row">
+                <div class="col-sm-12">
+                    <ol class="breadcrumb">
+                        <li>
+                            <a href="afterlogin.php">Trang Chủ</a>
+                        </li>
+                        <li>
+                            <a>Dịch Vụ</a>
+                        </li>
+                        <li>
+                            <a href="goitap.php">Gói Tập</a>
+                        </li>
+                        <li><h1>Đăng Ký Gói Tập</h1></li>
+
+                    </ol>
+                </div>
+                
+            </div>
+        </div>
+    </section>
+<div class="darkgrey_section">
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-5 col-sm-push-1">
+                <?php
+$show = $pdh->prepare("SELECT * FROM taikhoan WHERE tendangnhap='{$_SESSION['username']}' ");
+$show->setFetchMode(PDO::FETCH_ASSOC);
+$show->execute();
+$resultSet = $show->fetchAll();
+foreach ($resultSet as $row) {}
+?>
+                                    <?php
+                                    try{
+                                    $pdh = new PDO("mysql:host=localhost; dbname=gym"  , "ginnnz"  , "7121998Ab"  );
+                                    $pdh->query("  set names 'utf8'"  );
+                                    $them=$pdh->query("SELECT * FROM taikhoan");
+                                    }
+                                    catch(Exception $e){
+                                     echo $e->getMessage(); exit;
+                                    }
+                                    if ($_SERVER['REQUEST_METHOD']=="POST") {
+                                    $insert = $_POST['insert'];
+                                    $username_m = $_POST['username_m'];
+                                    $hotenkhach = $_POST['hotenkhach'];
+                                    $loaigoitap = $_POST['loaigoitap'];
+                                    $lichtap = $_POST['lichtap'];
+                                    $thoihan = $_POST['thoihan'];
+                                    $them=$pdh->query("INSERT INTO khachdangky (username,hotenkhach, loaigoitap, lichtap, thoihan) 
+                                                        VALUES('$username_m','$hotenkhach', '$loaigoitap','$lichtap','$thoihan')");   
+                                    } 
+                                    ?>                      
+                            <form method="post" action="themgoitap.php">
+                                <table>
+                                    <tr>
+                                        <label>Tài Khoản:</label><a>..........</a><input style="color: #343434;" type="text" name="username_m" value="<?php echo $_SESSION['username'];?>"><p></p>
+                                    </tr>
+                                    <tr>
+                                        <label>HỌ TÊN:</label><a>..............</a><input style="color: #343434;" type="text" name="hotenkhach" value="<?php echo $row['hoten'];?>"><p></p>
+                                    </tr>
+                                    <tr>
+                                        <td><label>LOẠI GÓI TẬP:</label><a>......</a><select style="color: #343434; width: 55%; height: 100%;" name="loaigoitap">
+                                                                            <option>CHỌN LOẠI GÓI TẬP</option>
+                                                                            <option value="YOGA CLASS">YOGA CLASS</option>
+                                                                            <option value="GROUP X CLASS">GROUP X CLASS</option>
+                                        </select></td>
+                                    </tr>
+                                    <tr>
+                                        <td><label>LỊCH TẬP:</label><a>..............</a><select style="color: #343434; width: 55%; height: 100%;" name="lichtap">
+                                                                            <option>CHỌN LỊCH TẬP</option>
+                                                                            <option value="2 - 4 - 6">2 - 4 - 6</option>
+                                                                            <option value="3 - 5 - 7">3 - 5 - 7</option>
+                                                                            <option value="FULL TUẦN">FULL TUẦN</option>
+                                        </select></td>
+                                    </tr>
+                                    <tr>
+                                        <td><label>THỜI HẠN:</label><a>............</a><select style="color: #343434; width: 55%; height: 100%;" name="thoihan">
+                                                                            <option>CHỌN THỜI HẠN</option>
+                                                                            <option value="1 Thang">1 Tháng</option>
+                                                                            <option value="3 Thang">3 Tháng</option>
+                                                                            <option value="6 Thang">6 Tháng</option>
+                                                                            <option value="1 Nam">1 Năm</option>
+                                                                            <option value="2 Nam">2 Năm</option>
+                                        </select></td>
+                                    </tr>
+                                    <tr>
+                                        <td colspan="2" ><input style="color: #343434;" type="submit" name="insert" value="ĐĂNG KÝ GÓI TẬP"></td>
+                                    </tr>
+                                        
+                                </table>
+                            </form> 
+             </div>
+        </div>
+    </div>
+</div>
+    <footer id="footer" class="darkgrey_section">
+        <div class="container">
+            <div class="row">
+
+                <div class="col-md-6 col-sm-8 to_animate">
+                    <div class="widget widget_text">
+                        <h3 class="widget-title">THÔNG TIN LIÊN LẠC STEEL BULL CENTER</h3>
+                        <div class="textwidget">
+                                <p>
+                                    <i class="fa fa-envelope-o"></i> <a href="mailto:brandzess21@gmail.com">brandzess21@gmail.com</a>
+                                </p>
+                                <p>
+                                    <i class="fa fa-phone"></i> +33 566 8037
+                                <p>
+                                <p>
+                                    <i class="rt-icon-locked"></i> <a href="register.php">Đăng ký</a>
+                                </p>
+                                    <i class="rt-icon-user2"></i> <a href="#" data-toggle="modal" data-target=".login-modal">Đăng nhập</a>
+                                </p>
+
+                        </div>
+                    </div>
+                </div>
+                    
+                    
+                  <div class="col-md-6 col-sm-8 to_animate">
+                    <div class="widget widget_tag_cloud">
+                        <h3 class="widget-title">DỊCH VỤ</h3>
+                        <div class="tagcloud">
+                           <a href="#" title="">GYM</a>
+                            <a href="#" title="">YOGA</a>
+                            <a href="#" title="">DANCE</a>
+                            <a href="#" title="">AEROBIC</a>
+                            <a href="#" title="">ZUMBA</a>
+                            <a href="#" title="">BOXING</a>
+                            <a href="#" title="">MMA</a>
+                            <a href="#" title="">MUAYTHAI</a>
+                            <a href="#" title="">CROSSFIT</a>
+                            <a href="#" title="">KICKFIT</a>
+                        </div>
+                    </div>
+                </div>
+                    
+                    
+                
+            
+            </div>
+        </div>
+    </footer>
+
+</div><!-- eof #box_wrapper -->
+
+<div class="preloader">
+    <div class="preloader_image"></div>
+</div>
+
+
+        <!-- libraries -->
+        <script src="js/vendor/jquery-1.11.1.min.js"></script>
+        <script src="js/vendor/bootstrap.min.js"></script>
+        <script src="js/vendor/jquery.appear.js"></script>
+
+        <!-- superfish menu  -->
+        <script src="js/vendor/jquery.hoverIntent.js"></script>
+        <script src="js/vendor/superfish.js"></script>
+        
+        <script src='js/vendor/owl.carousel.min.js'></script>
+
+        <!-- custom scripts -->
+        <script src="js/plugins.js"></script>
+        <script src="js/main.js"></script>
+            </body>
+</html>     

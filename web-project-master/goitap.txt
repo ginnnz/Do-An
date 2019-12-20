@@ -1,0 +1,256 @@
+<?php include('connect.php'); ?>
+<!DOCTYPE html>
+<head>
+    <title>GÓI TẬP</title>
+    <meta charset="utf-8">
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
+
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/animations.css">
+    <link rel="stylesheet" href="css/fonts.css">
+    <script src="js/vendor/modernizr-2.6.2.min.js"></script>
+
+</head>
+<body>
+
+
+<div id="box_wrapper">
+
+    <section id="topline" class="darkgrey_section">
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-6">
+                    <span>
+                        <i class="fa fa-envelope-o"></i> <a href="mailto:brandzess21@gmail.com">brandzess21@gmail.com</a>
+                    </span>
+                    <span>
+                         <i class="fa fa-phone"></i> +33 566 8037
+                    </span>
+                </div>
+                <div class="col-sm-6 text-right">
+                    <span>
+                        <?php echo ' Xin chào: '?> <i class="rt-icon-user2"></i>
+                                                   <a href="customerinfo.php"> <?php echo $_SESSION['username'];?> </a>
+                    <span></span>
+                    <span><a href="logout.php"> Đăng Xuất </a></span>
+                        
+                </div>
+                
+            </div>
+        </div>
+    </section>
+
+
+    <section id="topinfo" class="action_section table_section darkgrey_section">
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-4">
+                    <a href="afterlogin.php" class="navbar-brand" > STEEL BULL CENTER <span></span></a>
+                </div>
+
+                <div class="col-sm-8 text-right">
+                    Follow Us:
+                    <a class="socialico-facebook" href="#" title="Facebook" data-toggle="tooltip">#</a>
+                    <a class="socialico-twitter" href="#" title="Twitter" data-toggle="tooltip">#</a>
+                    <a class="socialico-google" href="#" title="Google" data-toggle="tooltip">#</a>
+                    
+
+                   
+                        <div class="widget widget_search">
+                            <form role="search" method="post" id="searchform" class="searchform form-inline" action="/">
+                                <div class="form-group">
+                                    <label class="screen-reader-text" for="search">Search for:</label>
+                                    <input type="text" value="" name="search" id="search" style="color: #00FF30" class="form-control" placeholder="Search...">
+                                </div>
+                                <button type="submit" id="searchsubmit" class="theme_button" >Search</button>
+                            </form>
+                        </div>
+
+                </div>
+
+                
+                
+                
+            </div>
+        </div>
+    </section>
+
+    <header id="header">
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-12">
+                    <span id="toggle_mobile_menu"></span>
+                    <nav id="mainmenu_wrapper">
+                        <ul id="mainmenu" class="nav nav-justified sf-menu">
+                            <li class="active">
+                                <a href="index.php"><i class="rt-icon-home"></i>Trang chủ</a>
+                            </li>
+                            <li>
+                                <a href="#"><i class="rt-icon-book" ></i>DỊCH VỤ</a>
+                                <ul>
+                                   <li>
+                                        <a href="goitap.php" style="font-weight: bold;">GÓI TẬP</a>
+                                    </li>
+                                    <li>
+                                        <a href="hopdong.php" style="font-weight: bold;">HỢP ĐỒNG</a>
+                                    </li>
+                                    <li>
+                                        <a href="#" style="font-weight: bold">PERSONAL TRAINER</a>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li>
+                                <a href="#"><i class="rt-icon-images2"></i>Tìm nâng cao</a>
+                            </li>
+                            <li>
+                                <a href="contact.php"><i class="rt-icon-contacts"></i> Liên hệ</a>
+                            </li>
+                        </ul>  
+                    </nav>
+                
+                </div>
+            </div>
+        </div>
+    </header>
+
+
+    <section id="breadcrumbs" class="darkgrey_section with_bottom_border">
+        <div class="container">
+
+            <div class="row">
+                <div class="col-sm-12">
+                    <ol class="breadcrumb">
+                        <li>
+                            <a href="index.php">Trang chủ</a>
+                        </li>
+                        <li>
+                            <a href="#">Dịch Vụ</a>
+                        </li>
+                        <li class="active"><h1>Gói Tập</h1></li>
+
+                    </ol>
+                </div>
+                
+            </div>
+        </div>
+    </section>
+
+    <div class="persionaltrainer">
+        <div class="darkgrey_section">
+            <div class="container">
+                <div class="row">
+                    <h2 class="section_header text-center">YOGA CLASS</h2>
+                    <div class="col-md-5">
+                        <img src="/img/wallpaper/yoga.jpg">
+                    </div>
+                    <div class="col-md-7">
+                        <h4 style="text-align: center;font-size: 30px; color:#00FF4E; white-space: nowrap; ">Giới thiệu về lớp học Yoga</h4>
+
+                        <p style="text-align: justify;font-size: 25px">Yoga là chuỗi các bài tập hỗ trợ cho toàn diện cho cả thể chất và tinh thần của người tập luyện. Với phương châm Gym cho mọi người, các lớp học Yoga tại STEEL BULL CENTER được thiết kế với nhiều cấp độ đa dạng nhằm mang lại dịch vụ tốt nhất cho cả người mới lẫn những tín đồ Yoga lâu năm.. </p>
+                        <h3><a href="themgoitap.php" style="color: #343434;"><button>ĐĂNG KÝ NGAY</button></h3></a>
+                        
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div> 
+        </section>
+
+    <div class="persionaltrainer">
+        <div class="darkgrey_section">
+            <div class="container">
+                <div class="row">
+                    <h2 class="section_header text-center">GROUP X CLASS</h2>
+                    <div class="col-md-5">
+                        <img src="/img/wallpaper/x.jpg">
+                    </div>
+                    <div class="col-md-7">
+                        <h4 style="text-align: center;font-size: 30px; color:#00FF4E; white-space: nowrap; ">Giới thiệu về Group X</h4>
+
+                        <p style="text-align: justify;font-size: 25px">Group X là tên gọi cho các lớp học theo nhóm, được tập luyện trên nền nhạc sôi động. Gồm các bài tập được thiết kế đa dạng phù hợp cho mọi người, từ những người lần đầu tiên đến với Gym đến những người tập luyện lâu năm.Tại STEEL BULL CENTER, bạn có thể trải nghiệm các lớp học như: New Pump, Kickfit, Zumba …Trung bình cơ thể bạn có thể đốt đến 600 calories cho mỗi lớp học diễn ra trong khoảng 60p. Hãy thường xuyên thay đổi lịch tập của mình để nâng cao hứng thú tập luyện và có được kết quả tốt nhất nhé </p>
+                        <h3><a href="themgoitap.php" style="color: #343434;"><button>ĐĂNG KÝ NGAY</button></h3></a>
+                        
+                        
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div> 
+    <footer id="footer" class="darkgrey_section">
+        <div class="container">
+            <div class="row">
+
+                <div class="col-md-6 col-sm-8 to_animate">
+                    <div class="widget widget_text">
+                        <h3 class="widget-title">THÔNG TIN LIÊN LẠC STEEL BULL CENTER</h3>
+                        <div class="textwidget">
+                                <p>
+                                    <i class="fa fa-envelope-o"></i> <a href="mailto:brandzess21@gmail.com">brandzess21@gmail.com</a>
+                                </p>
+                                <p>
+                                    <i class="fa fa-phone"></i> +33 566 8037
+                                <p>
+                                <p>
+                                    <i class="rt-icon-locked"></i> <a href="register.php">Đăng ký</a>
+                                </p>
+                                    <i class="rt-icon-user2"></i> <a href="logout.php" data-toggle="modal" data-target=".login-modal">ĐĂNG XUẤT</a>
+                                </p>
+
+                        </div>
+                    </div>
+                </div>
+                    
+                    
+                  <div class="col-md-6 col-sm-8 to_animate">
+                    <div class="widget widget_tag_cloud">
+                        <h3 class="widget-title">DỊCH VỤ</h3>
+                        <div class="tagcloud">
+                           <a href="#" title="">GYM</a>
+                            <a href="#" title="">YOGA</a>
+                            <a href="#" title="">DANCE</a>
+                            <a href="#" title="">AEROBIC</a>
+                            <a href="#" title="">ZUMBA</a>
+                            <a href="#" title="">BOXING</a>
+                            <a href="#" title="">MMA</a>
+                            <a href="#" title="">MUAYTHAI</a>
+                            <a href="#" title="">CROSSFIT</a>
+                            <a href="#" title="">KICKFIT</a>
+                        </div>
+                    </div>
+                </div>
+                    
+                    
+                
+            
+            </div>
+        </div>
+    </footer>
+
+</div><!-- eof #box_wrapper -->
+
+<div class="preloader">
+    <div class="preloader_image"></div>
+</div>
+
+
+        <!-- libraries -->
+        <script src="js/vendor/jquery-1.11.1.min.js"></script>
+        <script src="js/vendor/bootstrap.min.js"></script>
+        <script src="js/vendor/jquery.appear.js"></script>
+
+        <!-- superfish menu  -->
+        <script src="js/vendor/jquery.hoverIntent.js"></script>
+        <script src="js/vendor/superfish.js"></script>
+        
+        <script src='js/vendor/owl.carousel.min.js'></script>
+
+        <!-- custom scripts -->
+        <script src="js/plugins.js"></script>
+        <script src="js/main.js"></script>
+
+    </body>
+</html>

@@ -1,0 +1,38 @@
+<?php
+session_start();
+$username="";
+$password="";
+$email="";
+$hoten="";
+$diachi="";
+$sdt="";
+$errors=array();
+try{
+//$pdh = new PDO("mysql:host=localhost; dbname=gym"  , "ginnnz"  , "7121998Ab"  );
+$pdh = new PDO("mysql:host=localhost; dbname=id7396805_qlgym"  , "id7396805_ginnnz"  , "7121998Ab"  );
+$pdh->query("  set names 'utf8'"  );
+}
+catch(Exception $e){
+    echo $e->getMessage(); exit;
+//[1]. Chức Năng Đăng Nhập ADMIN:
+}
+if (isset($_POST['log_user'])) {
+  $username = $_POST['username'];
+  $password = $_POST['password'];
+
+if (empty($username)) {
+    array_push($errors, "Username is required");
+  }
+  if (empty($password)) {
+    array_push($errors, "Password is required");
+  }
+
+  if (count($errors) == 0) {
+    $results = $pdh->query("SELECT * FROM admin WHERE username='$username' AND password='$password' ");
+    if ($results->rowCount() == 1) {
+      header('location: loginsuccess.php');
+    }else {
+      array_push($errors, "Wrong username/password combination");
+    }
+  }
+}

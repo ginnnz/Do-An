@@ -1,0 +1,163 @@
+<?php include('connect.php') ?>
+<!DOCTYPE html>
+<html class="no-js">
+<head>
+    <title> STEEL BULL CENTER | Login </title>
+    <meta charset="utf-8">
+
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
+
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/animations.css">
+    <link rel="stylesheet" href="css/fonts.css">
+    <script src="js/vendor/modernizr-2.6.2.min.js"></script>
+
+</head>
+<body>      
+    <section id="topinfo" class="action_section table_section light_section">
+        <div class="container" style="padding:0; width:100%">
+            <a href="index.php" class="navbar-brand"><img src="img/wallpaper/w1.jpg" width="100%" height="100%"></a>
+        </div>
+    </section>
+
+    <section id="breadcrumbs" class="darkgrey_section with_bottom_border">
+        <div class="container">
+            
+            <div class="row">
+                <div class="col-sm-12">
+                    <ol class="breadcrumb">
+                        <li>
+                            <a href="index.php">Trang chủ</a>
+                        </li>
+                        <li class="active"><h1>Đăng nhập</h1></li>
+                    </ol>
+                </div>
+                
+            </div>
+        </div>
+    </section>
+
+<section class="darkgrey_section">
+    <div class="container">
+        <div class="row">
+
+            <div class="col-sm-5 col-sm-push-1">
+                <form  class="form-horizontal" role="form" method="post" action="login.php">
+                    <div class="form-group validate-required validate-email" id="username">
+                        <!-- Nhập tài khoản -->
+                        <label for="username" class="col-md-6 control-label">Tài khoản 
+                            <abbr class="required" title="required"></abbr>
+                        </label>
+                        <div class="col-md-6">
+                             <input type="text" class="form-control" name="username" style="color: #00FF1E" value="<?php echo $username; ?>">
+                        </div>
+                    </div>
+                    <!-- Nhập pass-->
+                    <div class="form-group validate-required validate-email" id="password">
+                        <label for="password" class="col-md-6 control-label">Mật khẩu
+                            <abbr class="required" title="required">*</abbr>
+                        </label>
+                        <div class="col-md-6">
+                             <input type="password" class="form-control" name="password" style="color: #00FF1E" value="<?php echo $password; ?>" >
+                        </div>
+                    </div>
+                    <div class="checkbox " style="padding: 0 0 20px 120px">
+                            <label>
+                                <input type="checkbox"> Lưu mật khẩu
+                            </label>
+                        </div>
+                     <?php include("error.php"); ?>
+                    <div class="form-group" >
+                        <div class="col-sm-offset-3 col-sm-9"  >
+                            <button type="submit" class="btn theme_button theme_button" name="log_user"><i class="rt-icon-user2"></i> Đăng nhập</button>
+                        </div>
+                    </div>
+                </form>
+
+
+            </div>
+            <div class="card">
+                <div class="col-sm-5 col-sm-push-2 text-center">
+                    <h3 >Bạn chưa có tài khoản?</h3>
+                    <a class="btn btn-block theme_button" href="register.php" style="color:#00FF30">ĐĂNG KÝ NGAY</a>
+                </div>
+             </div>   
+        </div>
+
+       </div>
+    </div>
+</section>
+
+
+
+    <footer id="footer" class="darkgrey_section">
+        <div class="container">
+            <div class="row">
+
+                <div class="col-md-6 col-sm-8 to_animate">
+                    <div class="widget widget_text">
+                        <h3 class="widget-title">HOTLINE</h3>
+                        <div class="textwidget">
+                                <p>
+                                    <i class="fa fa-envelope-o"></i> <a href="mailto:brandzess21@gmail.com">brandzess21@gmail.com</a>
+                                </p>
+                                <p>
+                                    <i class="fa fa-phone"></i> +33 566 8037
+                                <p>
+                                <p>
+                                    <i class="rt-icon-locked"></i> <a href="register.php">Đăng ký</a>
+                                </p>
+                        </div>
+                    </div>
+                </div>
+                    
+                    
+                <div class="col-md-6 col-sm-8 to_animate">
+                    <div class="widget widget_tag_cloud">
+                        <h3 class="widget-title">DỊCH VỤ</h3>
+                        <div class="tagcloud">
+                            <a href="#" title="">GYM</a>
+                            <a href="#" title="">YOGA</a>
+                            <a href="#" title="">DANCE</a>
+                            <a href="#" title="">AEROBIC</a>
+                            <a href="#" title="">ZUMBA</a>
+                            <a href="#" title="">BOXING</a>
+                            <a href="#" title="">MMA</a>
+                            <a href="#" title="">MUAYTHAI</a>
+                            <a href="#" title="">CROSSFIT</a>
+                            <a href="#" title="">KICKFIT</a>
+                        </div>
+                    </div>
+                </div>
+                    
+                    
+                
+            
+            </div>
+        </div>
+    </footer>
+
+ 
+
+</div><!-- eof #box_wrapper -->
+
+<div class="preloader">
+    <div class="preloader_image"></div>
+</div>
+
+
+        <!-- libraries -->
+        <script src="js/vendor/jquery-1.11.1.min.js"></script>
+        <script src="js/vendor/bootstrap.min.js"></script>
+        <script src="js/vendor/jquery.appear.js"></script>
+
+        <!-- custom scripts -->
+        <script src="js/plugins.js"></script>
+        <script src="js/main.js"></script>
+
+    </body>
+</html>

@@ -1,0 +1,364 @@
+<?php include('connect.php') ?>
+<!DOCTYPE html>
+<head>
+    <title> STEEL BULL CENTER | Home Page </title>
+    <meta charset="utf-8">
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
+
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/animations.css">
+    <link rel="stylesheet" href="css/fonts.css">
+    <script src="js/vendor/modernizr-2.6.2.min.js"></script>
+
+</head>
+<body>
+
+<div id="box_wrapper">
+
+    <section id="topline" class="darkgrey_section">
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-6">
+                    <span>
+                        <i class="fa fa-envelope-o"></i> <a href="mailto:brandzess21@gmail.com">brandzess21@gmail.com</a>
+                    </span>
+                    <span>
+                        <i class="fa fa-phone"></i> +33 566 8037
+                    </span>
+                </div>
+                <div class="col-sm-6 text-right">
+                    <span>
+                        <?php echo ' Xin chào: '?> <i class="rt-icon-user2"></i>
+                                                   <a href="customerinfo.php"> <?php echo $_SESSION['username'];?> </a>
+                    <span></span>
+                    <span><a href="logout.php"> Đăng Xuất </a></span>
+                        
+                </div>
+                
+            </div>
+        </div>
+    </section>
+
+
+    <section id="mainslider" class="dark_section">
+        <div class="slider-wrapper">
+            <div class="responisve-container">
+                <div class="slider">
+                    <div class="fs_loader"></div>
+                    <div class="slide">
+                        <img data-in="fade" data-out="fade" src="img/wallpaper/wallpaper.jpg" width="1920" height="550">
+                    </div>
+
+                    <div class="slide" data-in="slideLeft">
+                        <img data-in="fade" data-out="fade" src="img/wallpaper/wallpaper0.jpg" width="1920" height="550">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <section id="topinfo" class="action_section table_section darkgrey_section">
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-4">
+                    <a href="index.php" class="navbar-brand"> STEEL BULL CENTER <span></span></a>
+                </div>
+
+                <div class="col-sm-8 text-right">
+                    Follow Us:
+                    <a class="socialico-facebook" href="#" title="Facebook" data-toggle="tooltip">#</a>
+                    <a class="socialico-twitter" href="#" title="Twitter" data-toggle="tooltip">#</a>
+                    <a class="socialico-google" href="#" title="Google" data-toggle="tooltip">#</a>
+                    
+
+                   
+                        <div class="widget widget_search">
+                            <form role="search" method="post" id="searchform" class="searchform form-inline" action="/">
+                                <div class="form-group">
+                                    <label class="screen-reader-text" for="search">Search for:</label>
+                                    <input type="text" value="" name="search" id="search" style="color: #00FF30" class="form-control" placeholder="Search...">
+                                </div>
+                                <button type="submit" id="searchsubmit" class="theme_button" >Search</button>
+                            </form>
+                        </div>
+
+                </div>
+
+                
+                
+                
+            </div>
+        </div>
+    </section>
+
+    <header id="header">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12" >
+                    <span id="toggle_mobile_menu"></span>
+                    <nav id="mainmenu_wrapper">
+                        <ul id="mainmenu" class="nav nav-justified sf-menu">
+                            <li class="active"  >
+                                <a href="afterlogin.php"><i class="rt-icon-home"></i>Trang chủ</a>
+                            </li>
+                            <li>
+                                <a href="#"><i class="rt-icon-book" ></i>DỊCH VỤ</a>
+                                <ul>
+                                    <li>
+                                        <a href="goitap.php" style="font-weight: bold;">GÓI TẬP</a>
+                                    </li>
+                                    <li>
+                                        <a href="hopdong.php" style="font-weight: bold;">HỢP ĐỒNG</a>
+                                    </li>
+                                    <li>
+                                        <a href="personaltrainer.php" style="font-weight: bold">PERSONAL TRAINER</a>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li>
+                                <a href="#"><i class="rt-icon-images2"></i>Tìm nâng cao</a>
+                            </li>
+                            <li>
+                                <a href="contact.php"><i class="rt-icon-contacts"></i> Liên hệ</a>
+                            </li>
+                        </ul>  
+                    </nav>
+                
+                </div>
+            </div>
+        </div>
+    </header>
+<!-- Danh sách dịch vụ -->
+<section class="darkgrey_section gallery">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-sm-12">
+                    <h2 class="section_header text-center" style="color: #00FF30; white-space: nowrap;">MỤC TIÊU CHÍNH</h2>
+                    <p class="text-center">Đến với STEEL BULL CENTER bạn sẽ được trải nghiệm tất cả các bộ môn thể thao - thể hình - thể dục - thẫm mỹ bên cạnh đó bạn còn được trải nghiệm các dịch vụ cao cấp như chăm sóc sức khỏe - spa - hồ bơi- nghỉ dưỡng. Với đội ngũ nhân viên chuyên nghiệp, tận tâm với khánch hàng, tinh thần trách nhiệm cao trong công việc và luôn đặt tiêu chí " SỰ HÀI LÒNG CỦA BẠN LÀ ĐỘNG LỰC CỦA CHÚNG TÔI" lên hàng đầu. Hãy đến với chúng tôi hãy để được trải nghiệm tất cả những vụ đó. Chúng tôi luôn sẵn sàng chào đón bạn!</p>
+                    <div id="isotope_container" class="isotope row">
+                        <div class="isotope-item gallery-item col-md-3 col-sm-6 webdesign photography">
+                            <div class="gallery-image">
+                                <img src="./img/gym/gym1.jpg" alt="">
+                                <div class="gallery-image-links">
+                                </div>
+                            </div>
+                            <div class="gallery-item-description">
+                                <h3><a style="white-space: nowrap" >TRANG THIẾT BỊ</a></h3>
+                                <p>STEEL BULL CENTER sở hữu dàn máy móc trang thiết bị hiện đại và đạt chuẩn của các phòng gym cao cấp nhất hiện nay. Cập nhật tin tức thị trường và nâng cao chất lượng thiết bị.   </p>
+                            </div>
+                        </div>
+
+                        <div class="isotope-item gallery-item col-md-3 col-sm-6 photography webdesign">
+                            <div class="gallery-image">
+                                <img src="img/gym/gym2.jpg" alt="">
+                                <div class="gallery-image-links">
+                                </div>
+                            </div>
+                            <div class="gallery-item-description">
+                                <h3><a style="white-space: nowrap" >KHÔNG GIAN</a></h3>
+                                <p>Chuỗi phòng tập cao cấp STEEL BULL CENTER hội tụ những chuẩn mực thượng lưu: thiết kế sang trọng, trang thiết bị đẳng cấp, đa dạng mô hình tập luyện quốc tế hiện đại đáp ứng vượt bậc nhu cầu chăm sóc sức khoẻ và giải trí của khách hàng.</p>
+                            </div>
+                        </div>
+
+                        <div class="isotope-item gallery-item col-md-3 col-sm-6 development">
+                            <div class="gallery-image">
+                                <img src="img/gym/gym3.jpg" alt="">
+                                <div class="gallery-image-links">
+                                </div>
+                            </div>
+                            <div class="gallery-item-description">
+                                <h3><a style="white-space: nowrap" >PERSIONAL TRAINER    </a></h3>
+                                <p>Tập cùng Huấn Luyện Viên tốt hơn so với việc tự tập một mình, hệ thống đã được chứng minh để cải thiện cuộc sống và đảm bảo cho bạn đạt đến kết quả cao nhất . Họ sẽ đánh giá các chỉ số cơ thể và xác định bạn cần gì để cải thiện ngoại hình và sức khỏe của bạn.</p>
+                            </div>
+                        </div>
+
+                        <div class="isotope-item gallery-item col-md-3 col-sm-6 development">
+                            <div class="gallery-image">
+                                <img src="img/gym/gym4.jpg" alt="">
+                                <div class="gallery-image-links">
+                                </div>
+                            </div>
+                            <div class="gallery-item-description">
+                                <h3><a style="white-space: nowrap" >DỊCH VỤ HỒ BƠI</a></h3>
+                                <p>Sau những giờ tập căng thẳng bạn có thể trải nghiệm hồ bơi được thiết kế sang trọng và cao cấp để có những phút giây thư giãn thoải mái!</p>
+                            </div>
+                        </div>
+
+                        <div class="isotope-item gallery-item col-md-3 col-sm-6 webdesign">
+                            <div class="gallery-image">
+                                <img src="example/gallery/yoga1.jpg" alt="">
+                                <div class="gallery-image-links">
+                                </div>
+                            </div>
+                            <div class="gallery-item-description">
+                                <h3><a style="white-space: nowrap; " > YOGA </a></h3><p>Phòng bệnh và tăng cường sức khỏe toàn diện, trẻ hóa cơ thể, có được sự dẻo dai, thậm chí giảm cân. Về tinh thần yoga giúp đẩy lùi mọi lo lắng tạo cảm giác thư thái về lâu dài. Hệ thống yoga cơ bản đến nâng cao đều được dạy bởi các thầy Ấn Độ trong studio yoga chuẩn quốc tế.</p>
+                            </div>
+                        </div>
+
+                        <div class="isotope-item gallery-item col-md-3 col-sm-6 photography">
+                            <div class="gallery-image">
+                                <img src="example/gallery/room.jpg" alt="">
+                                <div class="gallery-image-links">
+                                </div>
+                            </div>
+                            <div class="gallery-item-description">
+                                <h3><a style="white-space: nowrap">PHÒNG KHÁCH</a></h3>
+                                <p>Được thiết kế sang trọng và không gian rộng rãi thoáng mát tạo cho bạn một cảm giác thật thư giãn. Là nơi lý tưởng cho bạn thư giãn sau nhưng bữa tập căng thẳng hoặc chuẩn bị cho một bữa tập luyện cháy hết mình!</p>
+                            </div>
+                        </div>
+
+                        <div class="isotope-item gallery-item col-md-3 col-sm-6 development programming">
+                            <div class="gallery-image">
+                                <img src="example/gallery/sauna.jpg" alt="">
+                                <div class="gallery-image-links">
+                                </div>
+                            </div>
+                            <div class="gallery-item-description">
+                                <h3><a style="white-space: nowrap">SAUNA NAM</a></h3>
+                                <p>Hệ thống phòng xông hơi đá nóng nam đáp ứng các tiêu chuẩn của các phòng xông hơi hiện đại ngày nay. Giúp phái mạnh hồi phục thể lực sau những giờ tập căng thẳng.</p>
+                            </div>
+                        </div>
+
+                        <div class="isotope-item gallery-item col-md-3 col-sm-6 programming">
+                            <div class="gallery-image">
+                                <img src="example/gallery/sauna2.jpg" alt="">
+                                <div class="gallery-image-links">
+                                </div>
+                            </div>
+                            <div class="gallery-item-description">
+                                <h3><a style="white-space: nowrap" >SAUNA NỮ</a></h3>
+                                <p>Hệ thống phòng xông hơi nước nữ đáp ứng các tiêu chuẩn làm đẹp và an toàn cho sức khỏe phái đẹp. Giúp chị em hồi phục sức khỏe, cải thiện tinh thần thoải mái và làn da khỏe mạnh căng bóng sau khi xông hơi.</p>
+                            </div>
+                        </div>
+                    </div>  
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    
+</section>
+    <div class="googlemap">
+        <div class="darkgrey_section">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-5">
+                        <img src="map.PNG" style="width:500px; height: 300px">
+                    </div>
+                    <div class="col-md-7">
+                        <h2 style="font-size: 28px; color:#00FF4E; "><span>TRỤ SỞ CHÍNH</span></h2>
+                        <p style="font-size: 28px; white-space: nowrap" > 180 Cao Lỗ, Phường 4, Quận 8, TP. Hồ Chí Minh </p>
+                        <h2 style="font-size: 28px; color:#00FF4E"> HOTLINE </h2>
+                        <p><i class="fa fa-envelope-o" style="font-size: 28px" ></i> <a href="mailto:brandzess21@gmail.com" style="font-size: 28px; white-space: nowrap;"> brandzess21@gmail.com </a></p>
+                        <p><i class="fa fa-phone" style="font-size: 28px"></i><a href="#" style="font-size: 28px; white-space: nowrap;"> +33 566 8037 </a></p>                      
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer id="footer" class="darkgrey_section">
+        <div class="container">
+            <div class="row">
+
+                <div class="col-md-6 col-sm-8 to_animate">
+                    <div class="widget widget_text">
+                        <h3 class="widget-title"> LIÊN KẾT </h3>
+                        <div class="textwidget">
+                            <p><i class="fa fa-envelope-o"></i> <a href="mailto:brandzess21@gmail.com"> Góp ý - Phản hồi </p>
+                            <P><i class="rt-icon-user2"></i> <a href="dieukien.php"> Điều kiện sử dụng </a></p>
+                            <p><i class="rt-icon-locked"></i> <a href="baomat.php"> Chính sách bảo mật </a></p>
+
+                        </div>
+                    </div>
+                </div>
+                    
+                    
+                <div class="col-md-6 col-sm-8 to_animate">
+                    <div class="widget widget_tag_cloud">
+                        <h3 class="widget-title">DỊCH VỤ</h3>
+                        <div class="tagcloud">
+                            <a href="#" title="">GYM</a>
+                            <a href="#" title="">YOGA</a>
+                            <a href="#" title="">DANCE</a>
+                            <a href="#" title="">AEROBIC</a>
+                            <a href="#" title="">ZUMBA</a>
+                            <a href="#" title="">BOXING</a>
+                            <a href="#" title="">MMA</a>
+                            <a href="#" title="">MUAYTHAI</a>
+                            <a href="#" title="">CROSSFIT</a>
+                            <a href="#" title="">KICKFIT</a>
+                        </div>
+                    </div>
+                </div>
+                    
+            
+            </div>
+        </div>
+    </footer>
+    <div class="tag">
+        <div class="darkgrey_section">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-12" style="text-align: center;">   
+                        <h2> © STEEL BULL CENTER 2019 </h2>                 
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+</div><!-- eof #box_wrapper -->
+
+<div class="preloader">
+    <div class="preloader_image"></div>
+</div>
+
+
+        <!-- libraries -->
+        <script src="js/vendor/jquery-1.11.1.min.js"></script>
+        <script src="js/vendor/bootstrap.min.js"></script>
+        <script src="js/vendor/jquery.appear.js"></script>
+
+        <!-- superfish menu  -->
+        <script src="js/vendor/jquery.hoverIntent.js"></script>
+        <script src="js/vendor/superfish.js"></script>
+        
+        <!-- page scrolling -->
+        <script src="js/vendor/jquery.easing.1.3.js"></script>
+        <script src='js/vendor/jquery.nicescroll.min.js'></script>
+        <script src="js/vendor/jquery.ui.totop.js"></script>
+        <script src="js/vendor/jquery.localscroll-min.js"></script>
+        <script src="js/vendor/jquery.scrollTo-min.js"></script>
+        <script src='js/vendor/jquery.parallax-1.1.3.js'></script>
+
+        <!-- widgets -->
+        <script src="js/vendor/jquery.easypiechart.min.js"></script><!-- pie charts -->
+        <script src='js/vendor/jquery.countTo.js'></script><!-- digits counting -->
+        <script src="js/vendor/jquery.prettyPhoto.js"></script><!-- lightbox photos -->
+        <script src='js/vendor/jquery.plugin.min.js'></script><!-- plugin creator for comingsoon counter -->
+        <script src='js/vendor/jquery.countdown.js'></script><!-- coming soon counter -->        
+        <script src="js/vendor/jquery.elevateZoom-3.0.8.min.js"></script><!-- zoom images -->
+        <script src='js/vendor/jflickrfeed.min.js'></script><!-- flickr -->
+        <script src='twitter/jquery.tweet.min.js'></script><!-- twitter -->
+
+        <!-- sliders, filters, carousels -->
+        <script src="js/vendor/jquery.isotope.min.js"></script>
+        <script src='js/vendor/owl.carousel.min.js'></script>
+        <script src='js/vendor/jquery.fractionslider.min.js'></script>
+        <script src='js/vendor/jquery.flexslider-min.js'></script>
+        <script src='js/vendor/jquery.bxslider.min.js'></script>
+
+        <!-- custom scripts -->
+        <script src="js/plugins.js"></script>
+        <script src="js/main.js"></script>
+
+    </body>
+</html>

@@ -1,0 +1,12 @@
+<?php
+$link = new mysqli('localhost', 'root', ''  , 'gym'  );
+mysqli_query($link,'SET NAME UTF8');
+
+if(isset($_GET['id'])){ 
+  $id = $_GET['id']; 
+  $query = "DELETE FROM taikhoan WHERE id='$id'"; 						
+  mysqli_query($link,$query) or die("Thất Bại.");
+  header('location:afterlogin.php');
+}                       
+?> 
+              					

@@ -1,0 +1,359 @@
+<?php include('connect.php'); ?>
+<!DOCTYPE html>
+<head>
+    <title>Persional Trainer Info</title>
+    <meta charset="utf-8">
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
+
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/animations.css">
+    <link rel="stylesheet" href="css/fonts.css">
+    <script src="js/vendor/modernizr-2.6.2.min.js"></script>
+
+</head>
+<body>
+
+
+<div id="box_wrapper">
+
+    <section id="topline" class="darkgrey_section">
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-6">
+                    <span>
+                        <i class="fa fa-envelope-o"></i> <a href="mailto:brandzess21@gmail.com">brandzess21@gmail.com</a>
+                    </span>
+                    <span>
+                         <i class="fa fa-phone"></i> +33 566 8037
+                    </span>
+                </div>
+                <div class="col-sm-6 text-right">
+                    <span>
+                        <i class="rt-icon-user2"></i> <a href="login.php">Đăng nhập</a>
+                    </span>
+                    <span>
+                        <i class="rt-icon-locked"></i> <a href="register.php">Đăng ký</a>
+                    </span>
+                </div>
+                
+            </div>
+        </div>
+    </section>
+
+
+    <section id="topinfo" class="action_section table_section darkgrey_section">
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-4">
+                    <a href="index.php" class="navbar-brand" > STEEL BULL CENTER <span></span></a>
+                </div>
+
+                <div class="col-sm-8 text-right">
+                    Follow Us:
+                    <a class="socialico-facebook" href="#" title="Facebook" data-toggle="tooltip">#</a>
+                    <a class="socialico-twitter" href="#" title="Twitter" data-toggle="tooltip">#</a>
+                    <a class="socialico-google" href="#" title="Google" data-toggle="tooltip">#</a>
+                    
+
+                   
+                        <div class="widget widget_search">
+                            <form role="search" method="post" id="searchform" class="searchform form-inline" action="/">
+                                <div class="form-group">
+                                    <label class="screen-reader-text" for="search">Search for:</label>
+                                    <input type="text" value="" name="search" id="search" style="color: #00FF30" class="form-control" placeholder="Search...">
+                                </div>
+                                <button type="submit" id="searchsubmit" class="theme_button" >Search</button>
+                            </form>
+                        </div>
+
+                </div>
+
+                
+                
+                
+            </div>
+        </div>
+    </section>
+
+    <header id="header">
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-12">
+                    <span id="toggle_mobile_menu"></span>
+                    <nav id="mainmenu_wrapper">
+                        <ul id="mainmenu" class="nav nav-justified sf-menu">
+                            <li class="active">
+                                <a href="index.php"><i class="rt-icon-home"></i>Trang chủ</a>
+                            </li>
+                            <li>
+                                <a href="#"><i class="rt-icon-book" ></i>DỊCH VỤ</a>
+                                <ul>
+                                   <li>
+                                        <a href="#" style="font-weight: bold;">GYM</a>
+                                    </li>
+                                    <li>
+                                        <a href="#" style="font-weight: bold">YOGA</a>
+                                    </li>
+                                    <li>
+                                        <a href="#" style="font-weight: bold" >AEROBIC</a>
+                                    </li>
+                                    <li>
+                                        <a href="#" style="font-weight: bold">DANCE</a>
+                                    <li>
+                                        <a href="#" style="font-weight: bold">ZUMBA</a>
+                                    </li>
+                                    <li>
+                                        <a href="#" style="font-weight: bold">BOXING</a>
+                                    </li>
+                                    <li>
+                                        <a href="#" style="font-weight: bold">MUAYTHAI</a>
+                                    </li>
+                                    <li>
+                                        <a href="#" style="font-weight: bold">MMA</a>
+                                    </li>
+                                    <li>
+                                        <a href="#" style="font-weight: bold">CROSSFIT</a>
+                                    </li>
+                                    <li>
+                                        <a href="#" style="font-weight: bold">KICKFIT</a>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li>
+                                <a href="#"><i class="rt-icon-images2"></i>Tìm nâng cao</a>
+                            </li>
+                            <li>
+                                <a href="contact.php"><i class="rt-icon-contacts"></i> Liên hệ</a>
+                            </li>
+                        </ul>  
+                    </nav>
+                
+                </div>
+            </div>
+        </div>
+    </header>
+
+
+    <section id="breadcrumbs" class="darkgrey_section with_bottom_border">
+        <div class="container">
+
+            <div class="row">
+                <div class="col-sm-12">
+                    <ol class="breadcrumb">
+                        <li>
+                            <a href="index.php">Trang chủ</a>
+                        </li>
+                        <li>
+                            <a href="#">Dịch Vụ</a>
+                        </li>
+                        <li class="active"><h1>Huấn Luyện Viên Cá Nhân</h1></li>
+
+                    </ol>
+                </div>
+                
+            </div>
+        </div>
+    </section>
+
+    <div class="persionaltrainer">
+        <div class="darkgrey_section">
+            <div class="container">
+                <div class="row">
+                    <h2 class="section_header text-center">PERSONAL TRAINER</h2>
+                    <div class="col-md-7">
+                        <img src="/img/wallpaper/pt.jpg">
+                    </div>
+                    <div class="col-md-5">
+                        <h4 style="font-size: 28px; color:#00FF4E; white-space: nowrap; ">PERSONAL TRAINER Là GÌ ?</h4>
+
+                        <p> -  HLV thể hình cá nhân hay còn gọi là Personal trainer (PT) là người trực tiếp hướng dẫn, đào tạo học viên trong suốt quá trình tập luyện.</p> 
+
+                        <p> - HLV cá nhân phải có giáo án riêng, lịch tập, chế độ ăn uống cho từng học viên. Việc thuê PT sẽ giúp học viên nhanh chóng bắt nhịp các kiến thức về gym, khi thực hành hạn chế tôi đa chấn thương và sẽ đạt được mục đích tập một cách nhanh nhất.</p>
+
+                        <p> - Những HLV ở STEEL BULL CENTER đều có bề dầy về kinh nghiệm thi đấu trong và ngoài nước. Có đào tạo bài bản, đảm bảo đủ các điều kiện trở thành HLV chuyên nghiệp.</p>
+
+                        <p> - Hệ thống của chúng tôi được thiết kế để phù hợp với cuộc sống bận rộn thường ngày, giúp bạn đạt được kết quả tốt nhất sau mỗi buổi tập.</p>
+                        
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <section class="darkgrey_section gallery-single">
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-12">
+                    <h2 class="section_header text-center">TOP PERSONAL TRAINER</h2>
+                </div>
+                <div class="col-md-4">
+                    <div id="carousel-generic" class="carousel slide">
+                        <!-- Wrapper for slides -->
+                        <div class="carousel-inner">
+                            <div class="item active">
+                                <img src="/img/wallpaper/ptboxing.jpg" alt="image">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+
+                <div class="col-sm-5 project-details" style="font-size: 16px;">
+                    <h4></h4>
+                    <p class="description">
+                        <span>HỌ TÊN: </span><a href="#"> HLV NGUYỄN TRỌNG ĐẠT </a></p>
+                    <p><span>LĨNH VỰC PHỤ TRÁCH: </span><a href="#">  BOXING </a></p>
+                    <p><span>BẰNG CẤP: </span><a href="#">  HLV QUỐC TẾ </a></p>
+                     <p><span>KINH NGHIỆM: </span><a href="#">  Có nhiều kinh nghiệm tập luyện và thi đấu các giải Boxing trong nước và ngoài nước. </a></p>
+                    <p><span>THÀNH TÍCH: </span> </p>
+                                                 <a href="#"> - HCV giải trẻ toàn quốc năm 2003 </a><br>
+                                                 <a href="#"> - HCB giải cup các CLB quốc 2004 </a><br/>
+                                                 <a href="#"> - HCĐ giải vô địch toàn quốc 2005 </a><br/>
+                                                 <a href="#"> - HCV vàng giải cup các CLB toàn quốc 2005 </a><br/>
+                                                 <a href="#"> - HCV giải đại hội TDTT toàn quốc 2006 </a> <br/>
+                                                 <a href="#"> - HCV vô địch toàn quốc 2007 </a><br/>
+                                                 <a href="#"> - HCB giải đại hội TDTT toàn quốc 2010 </a><br/> 
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="darkgrey_section gallery-single">
+        <div class="container">
+            <div class="row">
+                 <div class="col-md-4">
+                    <div id="carousel-generic" class="carousel slide">
+                        <!-- Wrapper for slides -->
+                        <div class="carousel-inner">
+                            <div class="item active">
+                                <img src="/img/wallpaper/ptnu1.jpg" alt="image">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+
+                <div class="col-sm-5 project-details" style="font-size: 16px;">
+                    <h4></h4>
+                    <p class="description">
+                        <span>HỌ TÊN: </span><a href="#"> HLV HUỲNH NHƯ </a></p>
+                    <p><span>LĨNH VỰC PHỤ TRÁCH: </span><a href="#">  Tăng Cơ Giảm Mỡ Cho Nữ , Kèm 1-1 </a></p>
+                    <p><span>BẰNG CẤP: </span><a href="#">  Cử nhân khoa HLV thể thao Trường Đại học TDTT TP Hồ Chí Minh. </a></p>
+                    <p><span>KINH NGHIỆM: </span><a href="#">  8 năm HLV cá nhân, chuyên các bài tập thể lực FitBox, giảm mỡ, săn chắc dành cho nữ. </a></p><p></p>
+                    <p><span>Thành Tích: </span><a href="#">  Thi đấu và tập luyện Fitness nhiều năm liền. </a></p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+      <section class="darkgrey_section gallery-single">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4">
+                    <div id="carousel-generic" class="carousel slide">
+                        <!-- Wrapper for slides -->
+                        <div class="carousel-inner">
+                            <div class="item active">
+                                <img src="/img/wallpaper/ptmuay.jpg" alt="image">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+
+                <div class="col-sm-5 project-details" style="font-size: 16px;">
+                    <h4></h4>
+                    <p class="description">
+                        <span>HỌ TÊN: </span><a href="#"> HLV RUBI </a></p>
+                    <p><span>LĨNH VỰC PHỤ TRÁCH: </span><a href="#">  MUAY THÁI </a></p>
+                    <p><span>BẰNG CẤP: </span><a href="#">  </a></p>
+                                              <a href="#"> - Đào tạo và tập luyện Luktupfah Muay Thái, Thái Lan </a><br>           
+                                              <a href="#"> - Personal Traning của California Fitness & Yoga </a></br><p></p>
+                     <p><span>KINH NGHIỆM: </span><a href="#"> </a></p>
+                                              <a href="#"> - Trợ lý HLV của phòng tập SaiGon Sport Club năm 2016 </a><br>
+                                              <a href="#"> - Personer Traning của Califonia Finess & Yoga năm 2016 - đầu 2017 </a><br/> 
+                                              <a href="#"> - Figher của Samurai Boxing từ 2017 đến nay </a></br> <p></p><p></p>       
+                                              <p><span>THÀNH TÍCH: </span><a href="#"> VĐV bộ môn Muay Thái & Boxing của đội tuyển TPHCM</a> </p>                                                
+                </div>
+            </div>
+        </div>
+    </section>
+    <footer id="footer" class="darkgrey_section">
+        <div class="container">
+            <div class="row">
+
+                <div class="col-md-6 col-sm-8 to_animate">
+                    <div class="widget widget_text">
+                        <h3 class="widget-title">THÔNG TIN LIÊN LẠC STEEL BULL CENTER</h3>
+                        <div class="textwidget">
+                                <p>
+                                    <i class="fa fa-envelope-o"></i> <a href="mailto:brandzess21@gmail.com">brandzess21@gmail.com</a>
+                                </p>
+                                <p>
+                                    <i class="fa fa-phone"></i> +33 566 8037
+                                <p>
+                                <p>
+                                    <i class="rt-icon-locked"></i> <a href="register.php">Đăng ký</a>
+                                </p>
+                                    <i class="rt-icon-user2"></i> <a href="#" data-toggle="modal" data-target=".login-modal">Đăng nhập</a>
+                                </p>
+
+                        </div>
+                    </div>
+                </div>
+                    
+                    
+                  <div class="col-md-6 col-sm-8 to_animate">
+                    <div class="widget widget_tag_cloud">
+                        <h3 class="widget-title">DỊCH VỤ</h3>
+                        <div class="tagcloud">
+                           <a href="#" title="">GYM</a>
+                            <a href="#" title="">YOGA</a>
+                            <a href="#" title="">DANCE</a>
+                            <a href="#" title="">AEROBIC</a>
+                            <a href="#" title="">ZUMBA</a>
+                            <a href="#" title="">BOXING</a>
+                            <a href="#" title="">MMA</a>
+                            <a href="#" title="">MUAYTHAI</a>
+                            <a href="#" title="">CROSSFIT</a>
+                            <a href="#" title="">KICKFIT</a>
+                        </div>
+                    </div>
+                </div>
+                    
+                    
+                
+            
+            </div>
+        </div>
+    </footer>
+
+</div><!-- eof #box_wrapper -->
+
+<div class="preloader">
+    <div class="preloader_image"></div>
+</div>
+
+
+        <!-- libraries -->
+        <script src="js/vendor/jquery-1.11.1.min.js"></script>
+        <script src="js/vendor/bootstrap.min.js"></script>
+        <script src="js/vendor/jquery.appear.js"></script>
+
+        <!-- superfish menu  -->
+        <script src="js/vendor/jquery.hoverIntent.js"></script>
+        <script src="js/vendor/superfish.js"></script>
+        
+        <script src='js/vendor/owl.carousel.min.js'></script>
+
+        <!-- custom scripts -->
+        <script src="js/plugins.js"></script>
+        <script src="js/main.js"></script>
+
+    </body>
+</html>

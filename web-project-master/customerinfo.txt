@@ -1,0 +1,290 @@
+<?php include('connect.php');?>
+<!DOCTYPE html>
+<head>
+    <title>Customer Info</title>
+    <meta charset="utf-8">
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
+
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/animations.css">
+    <link rel="stylesheet" href="css/fonts.css">
+    <script src="js/vendor/modernizr-2.6.2.min.js"></script>
+
+</head>
+<body>
+
+
+<div id="box_wrapper">
+
+    <section id="topline" class="darkgrey_section">
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-6">
+                    <span>
+                        <i class="fa fa-envelope-o"></i> <a href="mailto:brandzess21@gmail.com">brandzess21@gmail.com</a>
+                    </span>
+                    <span>
+                         <i class="fa fa-phone"></i> +33 566 8037
+                    </span>
+                </div>
+                <div class="col-sm-6 text-right">
+                    <span></span>
+                        <?php echo ' Xin chào: '?> <i class="rt-icon-user2"></i>
+                                                   <a href="customerinfo.php"> <?php echo $_SESSION['username'];?> </a>
+                    <span></span>
+                    <span><a href="logout.php"> Đăng Xuất </a></span>
+                    </span>
+                </div>
+                
+            </div>
+        </div>
+    </section>
+
+
+    <section id="topinfo" class="action_section table_section darkgrey_section">
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-4">
+                    <a href="index.php" class="navbar-brand" > STEEL BULL CENTER <span></span></a>
+                </div>
+
+                <div class="col-sm-8 text-right">
+                    Follow Us:
+                    <a class="socialico-facebook" href="#" title="Facebook" data-toggle="tooltip">#</a>
+                    <a class="socialico-twitter" href="#" title="Twitter" data-toggle="tooltip">#</a>
+                    <a class="socialico-google" href="#" title="Google" data-toggle="tooltip">#</a>
+                    
+
+                   
+                        <div class="widget widget_search">
+                            <form role="search" method="post" id="searchform" class="searchform form-inline" action="/">
+                                <div class="form-group">
+                                    <label class="screen-reader-text" for="search">Search for:</label>
+                                    <input type="text" value="" name="search" id="search" style="color: #00FF30" class="form-control" placeholder="Search...">
+                                </div>
+                                <button type="submit" id="searchsubmit" class="theme_button" >Search</button>
+                            </form>
+                        </div>
+                </div>               
+           </div>
+        </div>
+    </section>
+
+    <header id="header">
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-12">
+                    <span id="toggle_mobile_menu"></span>
+                    <nav id="mainmenu_wrapper">
+                        <ul id="mainmenu" class="nav nav-justified sf-menu">
+                            <li class="active">
+                                <a href="afterlogin.php"><i class="rt-icon-home"></i>Trang chủ</a>
+                            </li>
+                            <li>
+                                <a href="#"><i class="rt-icon-book" ></i>DỊCH VỤ</a>
+                                <ul>
+                                     <li>
+                                        <a href="goitap.php" style="font-weight: bold;">GÓI TẬP</a>
+                                    </li>
+                                    <li>
+                                        <a href="hopdong.php" style="font-weight: bold;">HỢP ĐỒNG</a>
+                                    </li>
+                                    <li>
+                                        <a href="personaltrainer.php" style="font-weight: bold">PERSONAL TRAINER</a>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li>
+                                <a href="#"><i class="rt-icon-images2"></i>Tìm nâng cao</a>
+                            </li>
+                            <li>
+                                <a href="contact.php"><i class="rt-icon-contacts"></i> Liên hệ </a>
+                            </li>
+                        </ul>  
+                    </nav>
+                
+                </div>
+            </div>
+        </div>
+    </header>
+
+
+    <section id="breadcrumbs" class="darkgrey_section with_bottom_border">
+        <div class="container">
+
+            <div class="row">
+                <div class="col-sm-12">
+                    <ol class="breadcrumb">
+                        <li>
+                            <a href="afterlogin.php">Trang chủ</a>
+                        </li>
+                        <li class="active"><h1>Thông Tin Tài Khoản Cá Nhân</h1></li>
+
+                    </ol>
+                </div>
+                
+            </div>
+        </div>
+    </section>
+<div class="darkgrey_section">
+    <?php
+$show = $pdh->prepare("SELECT * FROM taikhoan WHERE tendangnhap='{$_SESSION['username']}' ");
+$show->setFetchMode(PDO::FETCH_ASSOC);
+$show->execute();
+$resultSet = $show->fetchAll();
+foreach ($resultSet as $row) {}
+
+    ?>
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-7 col-sm-push-1">
+                <form  class="form-horizontal" role="form" method="post">
+                    <div  class="form-group validate-required" id="username">
+                        <label for="username" class="col-sm-3 control-label">Tài khoản 
+                            <abbr class="required" title="required">*</abbr>
+                        </label>
+                        <div class="col-sm-9">
+                            <input type="text" class="form-control" disabled name="username" style="color: #00FF30" value="<?php echo $_SESSION['username'];?>">
+                        </div>
+                    </div>
+                    <div  class="form-group validate-required" id="email">
+                        <label for="email" class="col-sm-3 control-label">Email 
+                            <abbr class="required" title="required">*</abbr>
+                        </label>
+                        <div class="col-sm-9">
+                            <input type="email" class="form-control" disabled name="email" style="color: #00FF30" value="<?php echo $row['email']; ?>">
+                        </div>
+                    </div>
+                    <div class="form-group validate-required " id="password">
+                        <label for="password" class="col-sm-3 control-label">Mật khẩu
+                            <abbr class="required" title="required">*</abbr>
+                        </label>
+                        <div class="col-sm-9">
+                             <input type="password" class="form-control" disabled name="password" id="password" style="color: #00FF1E" value="********" >
+                        </div>                      
+                    </div>                    
+                    <div  class="form-group validate-required" id="hoten">
+                        <label for="hoten" class="col-sm-3 control-label">Họ Tên 
+                            <abbr class="required" title="required">*</abbr>
+                        </label>
+                        <div class="col-sm-9">
+                            <input type="text" class="form-control" disabled name="hoten" style="color: #00FF30" value="<?php echo $row['hoten']?>">
+                        </div>
+                    </div>
+                    <div  class="form-group validate-required" id="diachi">
+                        <div class="clear"></div>
+                        <label for="diachi" class="col-sm-3 control-label">Địa Chỉ 
+                            <abbr class="required" title="required">*</abbr>
+                        </label>
+                        <div class="col-sm-9">
+                            <input type="text" class="form-control" disabled  name="diachi" style="color: #00FF30" value="<?php echo $row['diachi'];?>">
+                        </div>
+                    </div>
+                    <div  class="form-group validate-required" id="sdt">
+                        <div class="clear"></div>
+                        <label for="sdt" class="col-sm-3 control-label">Số Điện Thoại 
+                            <abbr class="required" title="required">*</abbr>
+                        </label>
+                        <div class="col-sm-9">
+                            <input type="text" class="form-control" disabled  name="sdt" style="color: #00FF30" value="<?php echo $row['sdt'];;?>">
+                        </div>
+                    </div>
+
+                    </div> 
+                </form>  
+                
+             </div>
+        <div class="doimatkhau">
+        <div class="darkgrey_section">
+             <div class="container">
+                <div class="row">
+                        <div class="col-sm-9 " style="text-align:center">
+                           <a href="doimatkhau.php"><button style="color: #343434;background-color:#00FF1E;font-weight: bold;display: inline-block;width: 24%; ">ĐỔI MẬT KHẨU</button></a>
+                           <br></br>
+                           <a href="doithongtintaikhoan.php"><button   style="color: #343434;background-color:#00FF1E;font-weight: bold;display: inline-block ">ĐỔI THÔNG TIN TÀI KHOẢN</button></a></br>
+                        </div>
+                </div>
+            </div>
+        </div>
+        </div>
+        </div>
+    </div>
+</div>
+    <footer id="footer" class="darkgrey_section">
+        <div class="container">
+            <div class="row">
+
+                <div class="col-md-6 col-sm-8 to_animate">
+                    <div class="widget widget_text">
+                        <h3 class="widget-title">THÔNG TIN LIÊN LẠC STEEL BULL CENTER</h3>
+                        <div class="textwidget">
+                                <p>
+                                    <i class="fa fa-envelope-o"></i> <a href="mailto:brandzess21@gmail.com">brandzess21@gmail.com</a>
+                                </p>
+                                <p>
+                                    <i class="fa fa-phone"></i> +33 566 8037
+                                <p>
+                                <p>
+                                    <i class="rt-icon-locked"></i> <a href="register.php">Đăng ký</a>
+                                </p>
+                                    <i class="rt-icon-user2"></i> <a href="#" data-toggle="modal" data-target=".login-modal">Đăng nhập</a>
+                                </p>
+
+                        </div>
+                    </div>
+                </div>
+                    
+                    
+                  <div class="col-md-6 col-sm-8 to_animate">
+                    <div class="widget widget_tag_cloud">
+                        <h3 class="widget-title">DỊCH VỤ</h3>
+                        <div class="tagcloud">
+                           <a href="#" title="">GYM</a>
+                            <a href="#" title="">YOGA</a>
+                            <a href="#" title="">DANCE</a>
+                            <a href="#" title="">AEROBIC</a>
+                            <a href="#" title="">ZUMBA</a>
+                            <a href="#" title="">BOXING</a>
+                            <a href="#" title="">MMA</a>
+                            <a href="#" title="">MUAYTHAI</a>
+                            <a href="#" title="">CROSSFIT</a>
+                            <a href="#" title="">KICKFIT</a>
+                        </div>
+                    </div>
+                </div>
+                    
+                    
+                
+            
+            </div>
+        </div>
+    </footer>
+
+</div><!-- eof #box_wrapper -->
+
+<div class="preloader">
+    <div class="preloader_image"></div>
+</div>
+
+
+        <!-- libraries -->
+        <script src="js/vendor/jquery-1.11.1.min.js"></script>
+        <script src="js/vendor/bootstrap.min.js"></script>
+        <script src="js/vendor/jquery.appear.js"></script>
+
+        <!-- superfish menu  -->
+        <script src="js/vendor/jquery.hoverIntent.js"></script>
+        <script src="js/vendor/superfish.js"></script>
+        
+        <script src='js/vendor/owl.carousel.min.js'></script>
+
+        <!-- custom scripts -->
+        <script src="js/plugins.js"></script>
+        <script src="js/main.js"></script>
+
+    </body>
+</html>

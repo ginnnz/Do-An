@@ -1,0 +1,18 @@
+<?php include('connect.php')
+?>
+<!DOCTYPE html>
+<html>
+    <head>
+        <title></title>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    </head>
+    <body style="background-color: #343434; color: #00FF6C">
+       <?php 
+           echo ' Xin Chào '.' Bạn Đã Đăng Nhập Thành Công !'."<br/>";
+           echo ' Click Link Sau Để Trở Về Trang Chủ: '
+       ?>
+       <a style="color: #00EAFF; text-decoration: none; " href="afterlogin.php"> ADMIN PAGE</a>
+    </body>
+</html>
+
+

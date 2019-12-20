@@ -1,0 +1,5 @@
+
+<?php
+//$pdh = new PDO("mysql:host=localhost; dbname=gym"  , "ginnnz"  , "7121998Ab"  );
+$link = new mysqli('localhost', 'ginnnz', '7121998Ab'  , 'gym'  );
+mysqli_query($link,'SET NAME UTF8');

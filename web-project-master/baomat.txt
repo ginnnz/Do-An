@@ -1,0 +1,319 @@
+<?php include('connect.php') ?>
+<!DOCTYPE html>
+<head>
+    <title> SECURITY PAGE </title>
+    <meta charset="utf-8">
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
+
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/animations.css">
+    <link rel="stylesheet" href="css/fonts.css">
+    <script src="js/vendor/modernizr-2.6.2.min.js"></script>
+
+</head>
+<body>
+
+<div id="box_wrapper">
+
+    <section id="topline" class="darkgrey_section">
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-6">
+                    <span>
+                        <i class="fa fa-envelope-o"></i> <a href="mailto:brandzess21@gmail.com">brandzess21@gmail.com</a>
+                    </span>
+                    <span>
+                        <i class="fa fa-phone"></i> +33 566 8037
+                    </span>
+                </div>
+                <div class="col-sm-6 text-right">
+                    <span>
+                        <i class="rt-icon-user2"></i> <a href="login.php" >Đăng nhập</a>
+                    </span>
+                    <span>
+                        <i class="rt-icon-locked"></i> <a href="register.php">Đăng ký</a>
+                    </span>
+                </div>
+                
+            </div>
+        </div>
+    </section>
+
+    <section id="topinfo" class="action_section table_section darkgrey_section">
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-4">
+                    <a href="index.php" class="navbar-brand"> STEEL BULL CENTER <span></span></a>
+                </div>
+
+                <div class="col-sm-8 text-right">
+                    Follow Us:
+                    <a class="socialico-facebook" href="#" title="Facebook" data-toggle="tooltip">#</a>
+                    <a class="socialico-twitter" href="#" title="Twitter" data-toggle="tooltip">#</a>
+                    <a class="socialico-google" href="#" title="Google" data-toggle="tooltip">#</a>
+                    
+
+                   
+                        <div class="widget widget_search">
+                            <form role="search" method="post" id="searchform" class="searchform form-inline" action="/">
+                                <div class="form-group">
+                                    <label class="screen-reader-text" for="search">Search for:</label>
+                                    <input type="text" value="" name="search" id="search" style="color: #00FF30" class="form-control" placeholder="Search...">
+                                </div>
+                                <button type="submit" id="searchsubmit" class="theme_button" >Search</button>
+                            </form>
+                        </div>
+
+                </div>
+
+                
+                
+                
+            </div>
+        </div>
+    </section>
+
+    <header id="header">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12" >
+                    <span id="toggle_mobile_menu"></span>
+                    <nav id="mainmenu_wrapper">
+                        <ul id="mainmenu" class="nav nav-justified sf-menu">
+                            <li class="active"  >
+                                <a href="index.php"><i class="rt-icon-home"></i>Trang chủ</a>
+                            </li>
+                            <li>
+                                <a href="#"><i class="rt-icon-book" ></i>DỊCH VỤ</a>
+                                <ul>
+                                    <li>
+                                        <a href="#" style="font-weight: bold;">GYM</a>
+                                    </li>
+                                    <li>
+                                        <a href="#" style="font-weight: bold">YOGA</a>
+                                    </li>
+                                    <li>
+                                        <a href="#" style="font-weight: bold" >AEROBIC</a>
+                                    </li>
+                                    <li>
+                                        <a href="#" style="font-weight: bold">DANCE</a>
+                                    <li>
+                                        <a href="#" style="font-weight: bold">ZUMBA</a>
+                                    </li>
+                                    <li>
+                                        <a href="#" style="font-weight: bold">BOXING</a>
+                                    </li>
+                                    <li>
+                                        <a href="#" style="font-weight: bold">MUAYTHAI</a>
+                                    </li>
+                                    <li>
+                                        <a href="#" style="font-weight: bold">MMA</a>
+                                    </li>
+                                    <li>
+                                        <a href="#" style="font-weight: bold">CROSSFIT</a>
+                                    </li>
+                                    <li>
+                                        <a href="#" style="font-weight: bold">KICKFIT</a>
+                                    </li>
+
+                                </ul>
+                            </li>
+                            <li>
+                                <a href="#"><i class="rt-icon-images2"></i>Tìm nâng cao</a>
+                            </li>
+                            <li>
+                                <a href="contact.php"><i class="rt-icon-contacts"></i> Liên hệ</a>
+                            </li>
+                        </ul>  
+                    </nav>
+                
+                </div>
+            </div>
+        </div>
+    </header>
+<!-- Danh sách truyện -->
+<section class="darkgrey_section gallery">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-sm-12">
+                    <h2 class="section_header text-center" style="color: #00FF30; white-space: nowrap;">CHÍNH SÁCH BẢO MẬT</h2>
+                    <h3 style="color: #00FF30; white-space: nowrap">1. MỤC ĐÍCH</h3>
+                    <p> - Cám ơn quý khách đã truy cập vào website steelbullcenter.tk của chúng tôi. Chúng tôi tôn trọng và cam kết sẽ bảo mật những thông tin mang tính riêng tư của khách hàng. Xin vui lòng đọc bản chính sách bảo mật dưới đây (“Chính sách bảo mật”) để hiểu hơn những cam kết mà chúng tôi thực hiện nhằm tôn trọng và bảo vệ quyền lợi của quý khách và bảo mật thông tin do quý khách cung cấp.</p>
+
+                    <p> - Chính sách bảo mật sẽ giải thích mục đích và phương thức chúng tôi tiếp nhận, sử dụng và (trong trường hợp nào đó) tiết lộ thông tin cá nhân của quý khách. Chính sách cũng sẽ giải thích các bước chúng tôi thực hiện để bảo mật thông tin cá nhân của quý khách. Cuối cùng, Chính sách bảo mật sẽ giải thích quyền lựa chọn của quý khách về việc thu thập, sử dụng và tiết lộ thông tin cá nhân của mình.</p>
+
+                    <p> - Bảo vệ dữ liệu cá nhân và gây dựng được niềm tin cho quý khách là vấn đề rất quan trọng với chúng tôi. Vì vậy, chúng tôi sẽ dùng tên và các thông tin khác liên quan đến quý khách tuân thủ theo nội dung của Chính sách bảo mật. Chúng tôi chỉ thu thập những thông tin cần thiết liên quan đến giao dịch mua bán.</p>
+
+                    <p> - Chúng tôi sẽ giữ thông tin của khách hàng trong thời gian và mục đích được quy định trong Chính sách bảo mật này. Quý khách có thể truy cập vào website mà không cần phải cung cấp chi tiết cá nhân dưới chế độ ẩn danh khi không đăng nhập vào tài khoản.</p>
+
+<h3 style="color: #00FF30; white-space: nowrap"> 2. PHẠM VI THU THẬP VÀ SỬ DỤNG THÔNG TIN </h3>
+
+                    <p> - Chúng tôi sẽ thu thập một số thông tin cá nhân của quý khách khi quý khách thực hiện đặt hàng trên trang web, bao gồm nhưng không hạn chế bởi các thông tin như: danh hiệu, tên, giới tính, ngày sinh, email, địa chỉ, địa chỉ giao hàng, số điện thoại, chi tiết thanh toán, chi tiết thanh toán bằng thẻ.</p>
+
+                    <p> - Chúng tôi thu thập, lưu trữ và xử lý thông tin của quý khách nhằm sử dụng cho quá trình mua hàng, cung cấp dịch vụ và cho những thông báo sau này, cụ thể:
+
+                    <p> * Chúng tôi sẽ dùng thông tin quý khách đã cung cấp để xử lý đơn đặt hàng, cung cấp các dịch vụ và thông tin yêu cầu thông qua trang web và theo yêu cầu của quý khách. Ngoài ra, chúng tôi có thể sử dụng các thông tin đó để xác minh và thực hiện giao dịch trực tuyến, kiểm toán việc tải dữ liệu từ web; cải thiện bố cục và nội dung trang web và điều chỉnh cho phù hợp với người dùng; nhận diện khách truy cập, nghiên cứu nhân khẩu học, gửi thông tin bao gồm thông tin sản phẩm và dịch vụ, nếu quý khách không có hành động từ chối. Quý khách có thể từ chối nhận thông tin tiếp thị của chúng tôi bất kỳ lúc nào.</p>
+
+                    <p> * Chúng tôi có thể chuyển tên và địa chỉ của quý khách cho bên thứ ba để thực hiện việc giao hàng (ví dụ: công ty chuyển phát nhanh hoặc nhà cung cấp).</p>
+
+                    <p> * Mọi thanh toán thực hiện thông qua OnePay sẽ được chuyển trực tiếp vào tài khoản ngân hàng của Công ty TNHH STEEL BULL CENTER. Các chi tiết thanh toán sẽ được bảo mật và sử dụng theo đúng quy định của pháp luật. Quý khách phải cung cấp cho chúng tôi những thông tin chính xác, không gây nhầm lẫn và phải tự điều chỉnh thông qua website hoặc thông báo trực tiếp cho chúng tôi nếu có thay đổi.</p>
+
+                    <p> * Chi tiết đơn đặt hàng của quý khách được chúng tôi lưu giữ và sẽ không công khai trực tiếp vì lí do bảo mật. Sau khi hoàn thành thanh toán trực tuyến, các thông tin đó sẽ được sử dụng theo đúng các quy định bảo mật của pháp luật.
+
+                    <p> - Nghiên cứu thị trường và tiếp thị </p>
+
+                    <p> * Chúng tôi có thể dùng thông tin cá nhân của quý khách để nghiên cứu thị trường. Mọi chi tiết sẽ được ẩn và chỉ được dùng để thống kê. Quý khách có thể từ chối không tham gia bất cứ lúc nào. Bất kỳ câu trả lời nào cho khảo sát hoặc thăm dò dư luận mà chúng tôi yêu cầu quý khách thực hiện sẽ không được chuyển cho bên thứ ba. Quý khách có thể được yêu cầu tiết lộ email cá nhân nếu muốn tham gia khảo sát. Câu trả lời sẽ được lưu tách riêng với email của quý khách.</p>
+
+                    <p> * Quý khách sẽ nhận được thông tin về công ty, trang web, các trang web khác, các sản phẩm, dịch vụ, bản tin hoặc bất cứ thông tin gì liên quan đến các công ty nằm trong tập đoàn hoặc các đối tác kinh doanh. Nếu quý khách không muốn nhận những thông tin này, vui lòng nhấn vào link từ chối trong bất kỳ email nào chúng tôi gửi cho quý khách. Trong vòng 7 ngày kể từ ngày nhận được chỉ dẫn của quý khách, chúng tôi sẽ ngừng cung cấp các thông tin nói trên. Chúng tôi có thể liên lạc với quý khách để xác thực yêu cầu.</p> 
+
+                    <p> * Trong bất kì cuộc thi nào, chúng tôi cũng có thể sử dụng dữ liệu để thông báo người chiến thắng và quảng cáo chào hàng nếu quý khách đăng ký tham gia. Quý khách vui lòng truy cập trang web để biết thêm chi tiết về các cuộc thi. </p>
+
+                    <p> - Đối tác thứ ba và Liên Kết </p>
+
+                    <p> * Chúng tôi có thể chuyển thông tin của quý khách cho các công ty khác trong tập đoàn hoặc cho các đối tác thứ ba (bao gồm nhưng không giới hạn bởi các bên thứ ba giao hàng, nhận tiền thanh toán, phân tích dữ liệu, tiếp thị và hỗ trợ dịch vụ khách hàng) trong khuôn khổ quy định của Chính sách bảo mật. Chúng tôi có thể trao đổi thông tin với bên thứ ba với mục đích chống gian lận và giảm rủi ro tín dụng. Chúng tôi có thể chuyển cơ sở dữ liệu trong đó bao gồm thông tin cá nhân của quý khách cho bên thứ ba nếu chúng tôi chuyển nhượng toàn bộ hoặc một phần công ty. Trong khuôn khổ Chính sách bảo mật, chúng tôi không bán hay tiết lộ dữ liệu cá nhân của quý khách cho bên thứ ba mà không được đồng ý trước trừ khi điều này là cần thiết cho việc thực hiện các điều khoản trong Chính sách bảo mật hoặc chúng tôi được yêu cầu phải làm như vậy theo quy định của pháp luật.</p>
+
+                    <p> * Hệ thống theo dõi hành vi của khách hàng được chúng tôi sử dụng trên kênh Hiển Thị Quảng Cáo (ví dụ như Tiếp Thị Lại Khách Hàng, hệ thống quản lý các chiến dịch quảng cáo DoubleClick, báo cáo về nhân khẩu, sở thích của khách hàng với công cụ Google Analytics...) có thể thu thập được các thông tin như độ tuổi, giới tính, sở thích và số lần tương tác với số lần xuất hiện của quảng cáo.</p>
+
+                    <p> * Với tính năng cài đặt quảng cáo, người dùng hoặc khách hàng có thể lựa chọn thoát ra khỏi tính năng theo dõi hành vi khách hàng của Google Analytics và lựa chọn cách xuất hiện của kênh Hiển Thị Quảng Cáo trên Google. Chúng tôi và các nhà cung cấp bên thứ ba, bao gồm Google, có thể sử dụng cookies của Google Analytics hoặc cookies của bên thứ ba (như DoubleClick) để thu thập thông tin, tối ưu hóa và phục vụ cho mục đích quảng cáo dựa trên lần truy cập trang web của người dùng trong quá khứ.</p>
+
+
+<h3 style="color: #00FF30; white-space: nowrap">3. THỜI GIAN LƯU TRỮ THÔNG TIN</h3>
+                    <p> - Công ty TNHH Trung tâm Thể dục Thể hình & Yoga California sẽ lưu trữ các Thông tin cá nhân do Khách hàng cung cấp trên các hệ thống nội bộ của chúng tôi trong quá trình cung cấp dịch vụ cho Khách hàng hoặc cho đến khi hoàn thành mục đích thu thập hoặc khi Khách hàng có yêu cầu hủy các thông tin đã cung cấp.</p>
+
+
+<h3 style="color: #00FF30; white-space: nowrap">4. ĐỊA CHỈ CỦA ĐƠN VỊ THU THẬP VÀ QUẢN LÝ THÔNG TIN CÁ NHÂN</h3>
+                    <p> - Công ty TNHH Trung tâm Thể dục STEEL BULL CENTER - 180 CAO LỖ, P.4, Q.8, TP.Hồ Chí Minh</p>
+
+<h3 style="color: #00FF30; white-space: nowrap">5. PHƯƠNG TIỆN VÀ CÔNG CỤ ĐỂ NGƯỜI DÙNG TIẾP CẬN VÀ CHỈNH SỬA DỮ LIỆU CÁ NHÂN CỦA MÌNH </h3>
+                    <P> - Quý khách có quyền yêu cầu chúng tôi điều chỉnh sai sót trong dữ liệu của quý khách mà không mất phí. Bất cứ lúc nào quý khách cũng có quyền yêu cầu chúng tôi ngừng sử dụng dữ liệu cá nhân của quý khách cho mục đích tiếp thị. Chúng tôi sẽ lưu giữ thông tin của quý khách cho đến khi được yêu cầu chấm dứt hoặc đến thời điểm mà chúng tôi cho là phù hợp.</P>
+                    <p> - Quý khách có thể thực hiện yêu cầu trực tuyến thông qua trang web hoặc liên hệ trực tiếp với chúng tôi theo thông tin được cung cấp tại trang web.</p>
+
+
+<h3 style="color: #00FF30; white-space: nowrap">6. CAM KẾT BẢO MẬT THÔNG TIN CÁ NHÂN KHÁCH HÀNG</h3>
+                    <p> - Chúng tôi có biện pháp thích hợp về kỹ thuật và an ninh để ngăn chặn truy cập trái phép hoặc trái pháp luật hoặc mất mát, tiêu hủy hoặc thiệt hại cho thông tin của quý khách. Khi thu thập dữ liệu trên trang web, chúng tôi thu thập chi tiết cá nhân của quý khách trên máy chủ với hệ thống tường lửa đảm bảo an toàn. Khi thu thập chi tiết các thẻ thanh toán điện tử, chúng tôi dùng mã hóa bằng Secure Socket Layer (SSL). Khi chúng tôi không thể bảo đảm an ninh 100%, SSL sẽ ngăn cản các hacker giải mã thông tin của quý khách. Quý khách không nên gửi đầy đủ chi tiết của thẻ tín dụng hay thẻ ghi nợ khi chưa được mã hóa cho chúng tôi. Chúng tôi duy trì các biện pháp bảo vệ vật lý và điện tử trong mối liên kết với việc thu thập, lưu trữ và tiết lộ thông tin của quý khách. Để thực hiện các thủ tục an toàn, chúng tôi có thể yêu cầu giấy tờ chứng minh trước khi tiết lộ thông tin cá nhân theo yêu cầu của quý khách.</p>
+
+                    <p> - Chúng tôi khuyến cáo quý khách không nên đưa thông tin chi tiết về việc thanh toán với bất kỳ ai dưới bất kỳ hình thức nào, chúng tôi không chịu trách nhiệm về những mất mát quý khách có thể gánh chịu từ việc trao đổi thông tin của quý khách nói trên.</p>
+
+                    <p> - Quý khách tuyệt đối không sử dụng bất kỳ chương trình, công cụ hay hình thức nào khác để can thiệp vào hệ thống hay làm thay đổi cấu trúc dữ liệu. Nghiêm cấm việc phát tán, truyền bá hay cổ vũ cho bất kỳ hoạt động nào nhằm can thiệp, phá hoại hay xâm nhập vào dữ liệu của hệ thống trang web. Mọi cá nhân, tổ chức vi phạm sẽ bị tước bỏ mọi quyền lợi cũng như sẽ bị truy tố trước pháp luật nếu cần thiết.</p>
+
+                    <p> - Mọi thông tin giao dịch sẽ được bảo mật và không tiết lộ cho bên thứ ba trừ khi được quy định tại Chính sách bảo mật này hoặc khi được yêu cầu bởi các cơ quan có thẩm quyền.</p>
+
+                    <p> - Các điều kiện, điều khoản và nội dung của trang web bao gồm Chính sách bảo mật này được điều chỉnh và giải thích bởi pháp luật Việt Nam. Mọi tranh chấp và khiếu kiện phát sinh từ hoặc liên quan đến các điều kiện, điều khoản và nội dung của website bao gồm Chính sách bảo mật này sẽ được tòa án Việt Nam có thẩm quyền giải quyết.</p>
+
+
+<h3 style="color: #00FF30; white-space: nowrap">7. SỬ DỤNG COOKIES</h3>
+                    <p> - Cookie là tập tin văn bản nhỏ có thể nhận dạng tên truy cập duy nhất từ máy tính của quý khách đến máy chủ của chúng tôi khi quý khách truy cập vào các trang nhất định trên website và sẽ được lưu bởi trình duyệt internet lên ổ cứng máy tính của quý khách. Cookie được dùng để nhận dạng địa chỉ IP và lưu lại thời gian. Chúng tôi dùng cookie để tiện cho quý khách truy cập vào trang web (ví dụ: ghi nhớ tên truy cập khi quý khách muốn vào thay đổi lại giỏ mua hàng mà không cần phải nhập lại địa chỉ email của mình) và không đòi hỏi thêm bất kỳ thông tin nào (ví dụ: cho mục tiêu quảng cáo).</p>
+
+<h3 style="color: #00FF30; white-space: nowrap">8. VIỆC CẬP NHẬT VÀ NGÔN NGỮ CỦA CHÍNH SÁCH BẢO MẬT</h3>
+                    <p> - Công ty TNHH Trung tâm Thể dục STEEL BULL CENTER sẽ chỉnh sửa Chính sách bảo mật này vào bất kỳ thời điểm nào khi cần thiết, bản Chính sách bảo mật cập nhật sẽ được công bố trên website của chúng tôi và sẽ được ghi ngày để Khách hàng nhận biết được bản mới nhất.</p>
+
+                    <p> - Theo quy định pháp luật, ngôn ngữ được ưu tiên sử dụng và tham chiếu là tiếng Việt. Trong trường hợp có sự mâu thuẫn trong cách giải thích giữa bản tiếng Việt và các ngôn ngữ khác thì bản tiếng Việt sẽ được ưu tiên tham chiếu.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <footer id="footer" class="darkgrey_section">
+        <div class="container">
+            <div class="row">
+
+                <div class="col-md-6 col-sm-8 to_animate">
+                    <div class="widget widget_text">
+                        <h3 class="widget-title"> LIÊN KẾT </h3>
+                        <div class="textwidget">
+                            <p><i class="fa fa-envelope-o"></i> <a href="mailto:brandzess21@gmail.com"> Góp ý - Phản hồi </p>
+                            <P><i class="rt-icon-user2"></i> <a href="login.php" data-toggle="modal" data-target=".login-modal"> Điều kiện sử dụngs </a></p>
+                            <p><i class="rt-icon-locked"></i> <a href="register.php"> Chính sách bảo mật </a></p>
+
+                        </div>
+                    </div>
+                </div>
+                    
+                    
+                <div class="col-md-6 col-sm-8 to_animate">
+                    <div class="widget widget_tag_cloud">
+                        <h3 class="widget-title">DỊCH VỤ</h3>
+                        <div class="tagcloud">
+                            <a href="#" title="">GYM</a>
+                            <a href="#" title="">YOGA</a>
+                            <a href="#" title="">DANCE</a>
+                            <a href="#" title="">AEROBIC</a>
+                            <a href="#" title="">ZUMBA</a>
+                            <a href="#" title="">BOXING</a>
+                            <a href="#" title="">MMA</a>
+                            <a href="#" title="">MUAYTHAI</a>
+                            <a href="#" title="">CROSSFIT</a>
+                            <a href="#" title="">KICKFIT</a>
+                        </div>
+                    </div>
+                </div>
+                    
+            
+            </div>
+        </div>
+    </footer>
+    <div class="tag">
+        <div class="darkgrey_section">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-12" style="text-align: center;">   
+                        <h2> © STEEL BULL CENTER 2019 </h2>                 
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+</div><!-- eof #box_wrapper -->
+
+<div class="preloader">
+    <div class="preloader_image"></div>
+</div>
+
+
+        <!-- libraries -->
+        <script src="js/vendor/jquery-1.11.1.min.js"></script>
+        <script src="js/vendor/bootstrap.min.js"></script>
+        <script src="js/vendor/jquery.appear.js"></script>
+
+        <!-- superfish menu  -->
+        <script src="js/vendor/jquery.hoverIntent.js"></script>
+        <script src="js/vendor/superfish.js"></script>
+        
+        <!-- page scrolling -->
+        <script src="js/vendor/jquery.easing.1.3.js"></script>
+        <script src='js/vendor/jquery.nicescroll.min.js'></script>
+        <script src="js/vendor/jquery.ui.totop.js"></script>
+        <script src="js/vendor/jquery.localscroll-min.js"></script>
+        <script src="js/vendor/jquery.scrollTo-min.js"></script>
+        <script src='js/vendor/jquery.parallax-1.1.3.js'></script>
+
+        <!-- widgets -->
+        <script src="js/vendor/jquery.easypiechart.min.js"></script><!-- pie charts -->
+        <script src='js/vendor/jquery.countTo.js'></script><!-- digits counting -->
+        <script src="js/vendor/jquery.prettyPhoto.js"></script><!-- lightbox photos -->
+        <script src='js/vendor/jquery.plugin.min.js'></script><!-- plugin creator for comingsoon counter -->
+        <script src='js/vendor/jquery.countdown.js'></script><!-- coming soon counter -->        
+        <script src="js/vendor/jquery.elevateZoom-3.0.8.min.js"></script><!-- zoom images -->
+        <script src='js/vendor/jflickrfeed.min.js'></script><!-- flickr -->
+        <script src='twitter/jquery.tweet.min.js'></script><!-- twitter -->
+
+        <!-- sliders, filters, carousels -->
+        <script src="js/vendor/jquery.isotope.min.js"></script>
+        <script src='js/vendor/owl.carousel.min.js'></script>
+        <script src='js/vendor/jquery.fractionslider.min.js'></script>
+        <script src='js/vendor/jquery.flexslider-min.js'></script>
+        <script src='js/vendor/jquery.bxslider.min.js'></script>
+
+        <!-- custom scripts -->
+        <script src="js/plugins.js"></script>
+        <script src="js/main.js"></script>
+
+    </body>
+</html>

@@ -1,0 +1,7 @@
+<?php
+		$conn=mysqli_connect('localhost','root','','gym');
+		$id=$_GET['id'];
+		$sql= "SELECT * FROM khachdangky WHERE id=$id"
+		$recordset = mysqli_query($con,$sql);
+		$row=mysqli_fetch_assoc($recordset);
+?>
